@@ -34,7 +34,7 @@ def calculate_iou(preds, masks):
         mask_cls = (masks == cls).float()
         intersection = (pred_cls * mask_cls).sum()
         union = pred_cls.sum() + mask_cls.sum() - intersection
-        iou += (intersection + 1e-6) / (union + 1e-6)  # Добавляем epsilon для стабильности
+        iou += (intersection + 1e-6) / (union + 1e-6)  
     return iou / num_classes  # Среднее IoU по всем классам
 ```
 
