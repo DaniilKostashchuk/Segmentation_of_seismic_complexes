@@ -6,3 +6,7 @@ model = Unet(
     classes=num_classes,  # Количество классов
     activation="softmax",  # Софтмакс для многоклассовой классификации
 )
+
+# Перемещение модели на GPU
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model = model.to(device)
