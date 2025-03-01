@@ -6,7 +6,7 @@
 
 ## Архитектура модели
 Используется архитектура U-Net с энкодером на основе ResNet18. Модель поддерживает многоклассовую сегментацию с активацией `softmax` на выходе. Веса энкодера инициализируются предобученными на ImageNet.
-```
+```python
 model = Unet(
     encoder_name="resnet18",  # Используем ResNet18 в качестве энкодера
     encoder_weights="imagenet",  # Предобученные веса на ImageNet
@@ -24,7 +24,7 @@ model = Unet(
   
 ## Метрика качества (IoU)
 Реализована функция `calculate_iou` для вычисления Intersection over Union (IoU) для многоклассовой сегментации, IoU вычисляется для каждого класса и усредняется.
-```
+```python
 def calculate_iou(preds, masks):
     preds = torch.argmax(preds, dim=1)  # Преобразование предсказаний в индексы классов
     masks = torch.argmax(masks, dim=1)  # Преобразование масок в индексы классов
