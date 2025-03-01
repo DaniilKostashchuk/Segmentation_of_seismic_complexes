@@ -60,6 +60,6 @@ def calculate_iou(preds, masks):
 ## Лицензия
 Этот проект распространяется под лицензией MIT. Подробности см. в файле `LICENSE`.
 ## Ссылки на данные
-<p>https://zenodo.org/records/3755060<p>
-<p>https://library.seg.org/doi/10.1190/INT-2018-0249.1<p>
-<p>https://library.seg.org/doi/10.1190/INT-2018-0249.1<p>
+https://zenodo.org/records/3755060<p>
+https://library.seg.org/doi/10.1190/INT-2018-0249.1
+
